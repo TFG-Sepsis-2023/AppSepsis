@@ -1,6 +1,7 @@
 import random
+from mpmath import mp
 
-class Clasificador_Perceptron_Umbral():
+class Clasificador_Perceptron_Regla_Delta():
     
     def __init__(self):
         self.w0 = None
@@ -13,25 +14,24 @@ class Clasificador_Perceptron_Umbral():
         self.w0 = random.uniform(-1,1)
         self.w = [random.uniform(-1,1) for _ in range(n_atributos)]
         
-        for _ in range(n_epochs):
+        for n in range(n_epochs):
             random.shuffle(Ejs_clas)
             for x,y in Ejs_clas:
-                o = salida_perceptron_umbral(self.w0,self.w,x)
+                o = sigmoide(self.w0,self.w,x)
                 for i in range(n_atributos):
-                    self.w[i]+= tasa*(y-o)*x[i]
+                    self.w[i]+= tasa*(y-o)*x[i]*o*(1-o) 
                 
                 self.w0 += tasa*(y-o) 
                 
             
             
     def clasifica(self,ej):
-        return salida_perceptron_umbral(self.w0, self.w,ej)
+        return round(sigmoide(self.w0, self.w,ej))
 
-
-def salida_perceptron_umbral(w0,w,ej):
+def sigmoide(w0,w,ej):
     
-    return int(w0+sum(wi*atrib for wi,atrib in zip(w,ej))>0)
-
+    x = w0+sum(wi*atrib for wi,atrib in zip(w,ej))
+    return (1/(1+mp.exp(-x)))
 
 def rendimiento(clf,X,y):
      

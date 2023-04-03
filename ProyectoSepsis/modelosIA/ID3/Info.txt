@@ -1,0 +1,30 @@
+
+Tipo de aprendizaje: supervisado 
+
+Paradigma: Aprendizaje inductivo
+
+Algoritmo ID3:
+
+    Clasificados por entropía (PRIMER NODO)
+        Entropía(D)= -|P|/|D|*log2(|P|/|D|)-|N|/|D|*log2(|N|/|D|)
+
+    Siguientes clasificados por GANANCIA
+        GANANCIA(D,A) = Entropía(D) - sum(|Dv|/|D|*Entropía(Dv))
+
+
+COLUMNAS DIVIDIDAS: (Si es mayor que la media será 1 y en caso contrario 0)
+
+    age 61,31593
+    anatomical site of infection 2,840659
+    bilirubin 0,8697802
+    creatinine 1,959423
+    extent of infection 1,802198
+    Glasgow coma scale 13,4478
+    initial procalcitonin (PCT) 13,87909
+    length of stay (LOS) 8,615385
+    mean arterial pressure 79,67308
+    mean arterial pressure 2,324176
+    platelets 231,1566
+    respiration (PaO2) 93,85742
+    respiration (FiO2) 45,78571
+    urine output 24 hours 1,14011
