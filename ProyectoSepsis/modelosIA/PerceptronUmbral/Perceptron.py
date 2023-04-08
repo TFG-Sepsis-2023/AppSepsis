@@ -61,7 +61,7 @@ def rendimiento(clf,X,y):
 def loadInPuts():
     lista = []
     
-    with open("ProyectoSepsis/modelosIA/datos/dataParsed.csv",'r') as f:
+    with open("modelosIA/datos/dataParsed.csv",'r') as f:
         next(f)
         for line in f:
             lista.append([float(num) for num in str(line)[:-1].split(',')])
@@ -71,7 +71,7 @@ def loadInPuts():
 def loadOutPutsVasopressors():
 
     lista = []
-    file = open("ProyectoSepsis/modelosIA/outputs/vasopressorsBinary.txt",'r')
+    file = open("modelosIA/outputs/vasopressorsBinary.txt",'r')
     
     for line in file:
         lista.append(int(float(str(line)[:-1])))
@@ -81,7 +81,7 @@ def loadOutPutsVasopressors():
 def loadOutPutsSurvival():
 
     lista = []
-    file = open("ProyectoSepsis/modelosIA/outputs/survivalBinary.txt",'r')
+    file = open("modelosIA/outputs/survivalBinary.txt",'r')
     
     for line in file:
         lista.append(int(float(str(line)[:-1])))
