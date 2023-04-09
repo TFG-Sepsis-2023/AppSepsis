@@ -9,9 +9,17 @@ def home(request):
    
     return render(request, 'main/principal/home.html')
 
-def salidaPerceptronUmbral(request):
+#Metodos para extraer JSON sobre Perceptron Umbral
+
+def salidaPerceptronUmbralSup(request):
 
     f = open("modelosIA/JSON_execute/PerceptronUmbral_SUPERVIVENCIA_JSON.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaPerceptronUmbralVaso(request):
+
+    f = open("modelosIA/JSON_execute/PerceptronUmbral_VASO_JSON.json")
     response = json.load(f)
     return JsonResponse(response, status=200, safe=False)
 
