@@ -7,4 +7,6 @@ urlpatterns = [
    path('test/<str:metodo>/', views.test, name='test'),
    path('salidaPerUmbralSup/', views.salidaPerceptronUmbralSup, name='salidaPerceptronUmbralSup'),
    path('salidaPerUmbralVaso/', views.salidaPerceptronUmbralVaso, name='salidaPerceptronUmbralVaso'),
+   path('salidaPerDeltaSup/', views.salidaPerceptronDeltaSup, name='salidaPerceptronDeltaSup'),
+   path('salidaPerDeltaVaso/', views.salidaPerceptronDeltaVaso, name='salidaPerceptronDeltaVaso'),
 ]

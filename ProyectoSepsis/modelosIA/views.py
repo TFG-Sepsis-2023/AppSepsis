@@ -23,8 +23,16 @@ def salidaPerceptronUmbralVaso(request):
     response = json.load(f)
     return JsonResponse(response, status=200, safe=False)
 
-def salidaPerceptronDelta():
-    response = TestPerceptronDelta.percptronDeltaTest()
+def salidaPerceptronDeltaSup(request):
+
+    f = open("modelosIA/JSON_execute/PerceptronDelta_SUPERVIVENCIA_JSON.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaPerceptronDeltaVaso(request):
+
+    f = open("modelosIA/JSON_execute/PerceptronDelta_VASO_JSON.json")
+    response = json.load(f)
     return JsonResponse(response, status=200, safe=False)
 
 def test(request, metodo):
