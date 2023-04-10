@@ -1,0 +1,82 @@
+[
+{
+"Datos entrenamiento":"168",
+"Datos test":"269",
+"aciertos":"68.421%",
+"precision":"86.486%",
+"especificidad":"9.091%",
+"sensibilidad":"76.190%"
+},
+{
+"Datos entrenamiento":"168",
+"Datos test":"169",
+"aciertos":"78.107%",
+"precision":"84.967%",
+"especificidad":"8.000%",
+"sensibilidad":"90.278%"
+},
+{
+"Datos entrenamiento":"168",
+"Datos test":"234",
+"aciertos":"73.077%",
+"precision":"86.916%",
+"especificidad":"12.500%",
+"sensibilidad":"81.579%"
+},
+{
+"Datos entrenamiento":"168",
+"Datos test":"118",
+"aciertos":"83.051%",
+"precision":"89.815%",
+"especificidad":"8.333%",
+"sensibilidad":"91.509%"
+},
+{
+"Datos entrenamiento":"168",
+"Datos test":"348",
+"aciertos":"81.250%",
+"precision":"100.000%",
+"especificidad":"0.000%",
+"sensibilidad":"81.250%"
+},
+{
+"Datos entrenamiento":"168",
+"Datos test":"296",
+"aciertos":"76.471%",
+"precision":"91.228%",
+"especificidad":"0.000%",
+"sensibilidad":"82.540%"
+},
+{
+"Datos entrenamiento":"168",
+"Datos test":"277",
+"aciertos":"75.862%",
+"precision":"88.732%",
+"especificidad":"27.273%",
+"sensibilidad":"82.895%"
+},
+{
+"Datos entrenamiento":"168",
+"Datos test":"222",
+"aciertos":"71.831%",
+"precision":"85.593%",
+"especificidad":"5.556%",
+"sensibilidad":"81.452%"
+},
+{
+"Datos entrenamiento":"168",
+"Datos test":"347",
+"aciertos":"76.471%",
+"precision":"100.000%",
+"especificidad":"0.000%",
+"sensibilidad":"76.471%"
+},
+{
+"Datos entrenamiento":"168",
+"Datos test":"307",
+"aciertos":"85.965%",
+"precision":"95.918%",
+"especificidad":"50.000%",
+"sensibilidad":"88.679%"
+}
+]

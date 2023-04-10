@@ -1,0 +1,42 @@
+[
+{
+"Datos entrenamiento":"0.9",
+"PRIOS":"0.2",
+"aciertos":"85.98%",
+"precision":"88.42%",
+"especificidad":"85.98%",
+"sensibilidad":"96.49%"
+},
+{
+"Datos entrenamiento":"0.9",
+"PRIOS":"0.3",
+"aciertos":"84.15%",
+"precision":"92.42%",
+"especificidad":"84.15%",
+"sensibilidad":"89.20%"
+},
+{
+"Datos entrenamiento":"0.9",
+"PRIOS":"0.5",
+"aciertos":"75.61%",
+"precision":"91.84%",
+"especificidad":"75.61%",
+"sensibilidad":"78.95%"
+},
+{
+"Datos entrenamiento":"0.9",
+"PRIOS":"0.75",
+"aciertos":"56.10%",
+"precision":"96.71%",
+"especificidad":"56.10%",
+"sensibilidad":"51.40%"
+},
+{
+"Datos entrenamiento":"0.9",
+"PRIOS":"0.9",
+"aciertos":"71.34%",
+"precision":"90.34%",
+"especificidad":"71.34%",
+"sensibilidad":"75.17%"
+}
+]
