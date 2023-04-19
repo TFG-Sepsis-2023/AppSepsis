@@ -70,6 +70,17 @@ def salidaXGBVaso(request):
     response = json.load(f)
     return JsonResponse(response, status=200, safe=False)
 
+def salidaRNCome(request):
+
+    f = open("modelosIA/JSON_execute/RED_OUTCOME_JSON.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaRNSofa(request):
+    f = open("modelosIA/JSON_execute/RED_SOFA_JSON.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
 def salidaKNNOUTCOME(request):
 
     f = open("modelosIA/JSON_execute/K_OUTCOME_JSON.json")
