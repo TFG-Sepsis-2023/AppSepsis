@@ -105,6 +105,18 @@ def salidaSVMVaso(request):
     response = json.load(f)
     return JsonResponse(response, status=200, safe=False)
 
+def salidaNBSup(request):
+
+    f = open("modelosIA/JSON_execute/NB_SUPERVIVENCIA.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaNBVaso(request):
+
+    f = open("modelosIA/JSON_execute/NB_VASO.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
 def test(request, metodo):
     
     return render(request, 'main/principal/test.html', {'metodo': metodo})

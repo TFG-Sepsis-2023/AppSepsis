@@ -21,4 +21,6 @@ urlpatterns = [
    path('salidaKNNSofa/', views.salidaKNNSofa, name='salidaKNNSofa'),
    path('salidaSVMSup/', views.salidaSVMSup, name='salidaSVMSup'),
    path('salidaSVMVaso/', views.salidaSVMVaso, name='salidaSVMVaso'),
+   path('salidaNBSup/', views.salidaNBSup, name='salidaNBSup'),
+   path('salidaNBVaso/', views.salidaNBVaso, name='salidaNBVaso'),
 ]

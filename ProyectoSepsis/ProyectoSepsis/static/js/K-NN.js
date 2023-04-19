@@ -79,7 +79,7 @@ $(document).ready(() => {
         }
     });
 
-    setTimeout(graf_sup, 2000);
+    setTimeout(graf_sup, 1000);
     
     url = '/salidaKNNSofa/';
     $.getJSON( url, function(data){
@@ -100,7 +100,7 @@ $(document).ready(() => {
         }
     });
 
-    setTimeout(graf_vaso, 2000);
+    setTimeout(graf_vaso, 1000);
     
 });
 
