@@ -15,4 +15,8 @@ urlpatterns = [
    path('salidaMLVaso/', views.salidaMLVaso, name='salidaMLVaso'),
    path('salidaXGBSup/', views.salidaXGBSup, name='salidaXGBSup'),
    path('salidaXGBVaso/', views.salidaXGBVaso, name='salidaXGBVaso'),
+   path('salidaKNNOUTCOME/', views.salidaKNNOUTCOME, name='salidaKNNOUTCOME'),
+   path('salidaKNNSofa/', views.salidaKNNSofa, name='salidaKNNSofa'),
+   path('salidaSVMSup/', views.salidaSVMSup, name='salidaSVMSup'),
+   path('salidaSVMVaso/', views.salidaSVMVaso, name='salidaSVMVaso'),
 ]

@@ -70,6 +70,30 @@ def salidaXGBVaso(request):
     response = json.load(f)
     return JsonResponse(response, status=200, safe=False)
 
+def salidaKNNOUTCOME(request):
+
+    f = open("modelosIA/JSON_execute/K_OUTCOME_JSON.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaKNNSofa(request):
+
+    f = open("modelosIA/JSON_execute/K_SOFA_JSON.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaSVMSup(request):
+
+    f = open("modelosIA/JSON_execute/SVM_Survival.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaSVMVaso(request):
+
+    f = open("modelosIA/JSON_execute/SVM_VASO.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
 def test(request, metodo):
     
     return render(request, 'main/principal/test.html', {'metodo': metodo})
