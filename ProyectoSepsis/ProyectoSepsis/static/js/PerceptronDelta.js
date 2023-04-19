@@ -14,7 +14,7 @@ let tasa = 0;
 $(document).ready(() => {
     $('#descripcion').append('<div class="col-md-6 p-lg-5 mx-auto my-5"><h4 class="fw-normal">TEST SEPSIS METODO: Perceptron Delta</h4></div>')
     $('#muestra_datos').hide()
-    $('#muestra_datos').append(`<h5 class="mb-3">Resultados (SUPERVIVENCIA)</h5>
+    $('#muestra_datos').append(`<h5 class="mb-3" id ="tit"></h5>
                                 <div class="row">
                                     <div class="col"> 
                                         <table id="tabladatos" class="table table-striped table-bordered table-hover table-advance">
@@ -35,7 +35,7 @@ $(document).ready(() => {
                                         <canvas id="graf_sup"></canvas>
                                     </div>
                                 </div>
-                                <h5 class="mb-3">Resultados (VASOPRESORES)</h5>
+                                <h5 class="mb-3" id ="tit1"></h5>
                                 <div class="row">
                                     <div class="col"> 
                                         <table id="tabladatos1" class="table table-striped table-bordered table-hover table-advance">
@@ -60,6 +60,7 @@ $(document).ready(() => {
     let url = '/salidaPerDeltaSup/';
     $.getJSON( url, function(data){
         tasa = parseFloat(data[0].tasa);
+        $('#tit').append(`Resultados (SUPERVIVENCIA) - Tasa: ${tasa}`)
         for (let i = 0; i < data.length; i++) {
             $('#tabladatos tbody').append(`
                 <tr>
@@ -82,7 +83,7 @@ $(document).ready(() => {
     url = '/salidaPerDeltaVaso/';
     $.getJSON( url, function(data){
         tasa_vaso = parseFloat(data[0].tasa);
-
+        $('#tit1').append(`Resultados (VASOPRESORES) - Tasa: ${tasa_vaso}`)
         for (let i = 0; i < data.length; i++) {
             $('#tabladatos1 tbody').append(`
                 <tr>
@@ -139,12 +140,6 @@ function graf_sup(){
                 beginAtZero: true
                 }
             }]
-            },
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Valores en % sobre la mejor tasa: ' + tasa
-                }
             }
         }
     });
@@ -186,12 +181,6 @@ function graf_vaso(){
                 beginAtZero: true
                 }
             }]
-            },
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Valores en % sobre la mejor tasa: ' + tasa_vaso
-                }
             }
         }
     });

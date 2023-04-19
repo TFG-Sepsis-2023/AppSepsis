@@ -1,6 +1,6 @@
 [
 {
-"Datos entrenamiento":"0.9",
+"datosEntrenamiento":"0.9",
 "PRIOS":"0.2",
 "aciertos":"32.32%",
 "precision":"17.53%",
@@ -8,7 +8,7 @@
 "sensibilidad":"74.58%"
 },
 {
-"Datos entrenamiento":"0.9",
+"datosEntrenamiento":"0.9",
 "PRIOS":"0.3",
 "aciertos":"32.62%",
 "precision":"18.36%",
@@ -16,7 +16,7 @@
 "sensibilidad":"79.66%"
 },
 {
-"Datos entrenamiento":"0.9",
+"datosEntrenamiento":"0.9",
 "PRIOS":"0.5",
 "aciertos":"51.22%",
 "precision":"17.22%",
@@ -24,7 +24,7 @@
 "sensibilidad":"42.62%"
 },
 {
-"Datos entrenamiento":"0.9",
+"datosEntrenamiento":"0.9",
 "PRIOS":"0.75",
 "aciertos":"68.29%",
 "precision":"16.13%",
@@ -32,7 +32,7 @@
 "sensibilidad":"16.13%"
 },
 {
-"Datos entrenamiento":"0.9",
+"datosEntrenamiento":"0.9",
 "PRIOS":"0.9",
 "aciertos":"77.44%",
 "precision":"6.67%",

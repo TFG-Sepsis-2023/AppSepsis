@@ -1,17 +1,17 @@
 [
 {
-"Datos ENTRENAMIENTO":"50",
-"Datos TEST":"150",
-"Profundidad":"1",
+"datosEntrenamiento":"50",
+"datosTest":"150",
+"profundidad":"1",
 "aciertos":"96.67%",
 "precision":"96.50%",
 "especificidad":"96.67%",
 "sensibilidad":"100.00%"
 },
 {
-"Datos ENTRENAMIENTO":"50",
-"Datos TEST":"150",
-"Profundidad":"2",
+"datosEntrenamiento":"50",
+"datosTest":"150",
+"profundidad":"2",
 "aciertos":"95.33%",
 "precision":"97.81%",
 "especificidad":"95.33%",

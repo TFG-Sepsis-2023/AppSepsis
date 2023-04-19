@@ -1,19 +1,20 @@
-let epochs = []
+let datosTest = []
 let aciertos = []
 let precision = []
 let especificidad = []
 let sensibilidad = []
+let datosTest1 = [];
 let aciertos1 = [];
 let precision1 = [];
 let especificidad1 = [];
 let sensibilidad1 = [];
-let tasa = 0;
-let tasa_vaso = 0;
+let datosEntrenamiento = 0;
+let datosEntrenamiento1 = 0;
 
 
 
 $(document).ready(() => {
-    $('#descripcion').append('<div class="col-md-6 p-lg-5 mx-auto my-5"><h4 class="fw-normal">TEST SEPSIS METODO: Perceptron Umbral</h4></div>')
+    $('#descripcion').append('<div class="col-md-6 p-lg-5 mx-auto my-5"><h4 class="fw-normal">TEST SEPSIS METODO: ID3</h4></div>')
     $('#muestra_datos').hide()
     $('#muestra_datos').append(`<h5 class="mb-3" id ="tit"></h5>
                                 <div class="row">
@@ -21,7 +22,7 @@ $(document).ready(() => {
                                         <table id="tabladatos" class="table table-striped table-bordered table-hover table-advance">
                                             <thead>
                                                 <tr>
-                                                    <th>Epochs</th>
+                                                    <th>Datos Test</th>
                                                     <th>Acierto</th>
                                                     <th>Presición</th>
                                                     <th>Especificidad</th>
@@ -42,7 +43,7 @@ $(document).ready(() => {
                                         <table id="tabladatos1" class="table table-striped table-bordered table-hover table-advance">
                                             <thead>
                                                 <tr>
-                                                    <th>Epochs</th>
+                                                    <th>Datos Test</th>
                                                     <th>Acierto</th>
                                                     <th>Presición</th>
                                                     <th>Especificidad</th>
@@ -58,20 +59,20 @@ $(document).ready(() => {
                                     </div>
                                 </div>
                                 `);
-    let url = '/salidaPerUmbralSup/';
+    let url = '/salidaID3Sup/';
     $.getJSON( url, function(data){
-        tasa = parseFloat(data[0].tasa);
-        $('#tit').append(`Resultados (SUPERVIVENCIA) - Tasa: ${tasa}`)
+        datosEntrenamiento = parseFloat(data[0].datosEntrenamiento);
+        $('#tit').append(`Resultados (SUPERVIVENCIA) - Datos Entrenamiento: ${datosEntrenamiento}`)
         for (let i = 0; i < data.length; i++) {
             $('#tabladatos tbody').append(`
                 <tr>
-                    <td>${data[i].epochs}</td>
+                    <td>${data[i].datosTest}</td>
                     <td>${data[i].aciertos}</td>
                     <td>${data[i].precision}</td>
                     <td>${data[i].especificidad}</td>
                     <td>${data[i].sensibilidad}</td>
             `)
-            epochs.push(parseInt(data[i].epochs))
+            datosTest.push(parseInt(data[i].datosTest))
             aciertos.push(parseFloat(data[i].aciertos.substring(0, data[i].aciertos.length - 1)))
             precision.push(parseFloat(data[i].precision.substring(0, data[i].precision.length - 1)))
             especificidad.push(parseFloat(data[i].especificidad.substring(0, data[i].especificidad.length - 1)))
@@ -81,19 +82,20 @@ $(document).ready(() => {
 
     setTimeout(graf_sup, 2000);
     
-    url = '/salidaPerUmbralVaso/';
+    url = '/salidaID3Vaso/';
     $.getJSON( url, function(data){
-        tasa_vaso = parseFloat(data[0].tasa);
-        $('#tit1').append(`Resultados (VASOPRESORES) - Tasa: ${tasa_vaso}`)
+        datosEntrenamiento1 = parseFloat(data[0].datosEntrenamiento);
+        $('#tit1').append(`Resultados (VASOPRESORES) - Datos Entrenamiento: ${datosEntrenamiento1}`)
         for (let i = 0; i < data.length; i++) {
             $('#tabladatos1 tbody').append(`
                 <tr>
-                    <td>${data[i].epochs}</td>
+                    <td>${data[i].datosTest}</td>
                     <td>${data[i].aciertos}</td>
                     <td>${data[i].precision}</td>
                     <td>${data[i].especificidad}</td>
                     <td>${data[i].sensibilidad}</td>
             `)
+            datosTest1.push(parseInt(data[i].datosTest))
             aciertos1.push(parseFloat(data[i].aciertos.substring(0, data[i].aciertos.length - 1)))
             precision1.push(parseFloat(data[i].precision.substring(0, data[i].precision.length - 1)))
             especificidad1.push(parseFloat(data[i].especificidad.substring(0, data[i].especificidad.length - 1)))
@@ -110,7 +112,7 @@ function graf_sup(){
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: epochs,
+            labels: datosTest,
             datasets: [
                 {
                     label: 'Aciertos',
@@ -151,7 +153,7 @@ function graf_vaso(){
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: epochs,
+            labels: datosTest1,
             datasets: [
                 {
                     label: 'Aciertos',
