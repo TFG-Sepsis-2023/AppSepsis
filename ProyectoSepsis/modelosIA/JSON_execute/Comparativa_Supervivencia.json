@@ -1,0 +1,59 @@
+[{
+    "metodo":"ID3",
+    "aciertos":"83.56%",
+    "precision":"89.70%",
+    "especificidad":"0%",
+    "sensibilidad":"92.42%"
+    },
+    {
+    "metodo":"XGB C4.3",
+    "aciertos":"100%",
+    "precision":"100%",
+    "especificidad":"100%",
+    "sensibilidad":"100%"
+    
+    },
+    {
+    "metodo":"NaiveBayes",
+    "aciertos":"81.58%",
+    "precision":"85.71%",
+    "especificidad":"16.67%",
+    "sensibilidad":"93.75%"
+    },
+    {
+    "metodo":"ML",
+    "aciertos":"87.67%",
+    "precision":"91.17%",
+    "especificidad":"95.38%",
+    "sensibilidad":"87.67%"
+    },
+    {
+    "metodo":"SVM",
+    "aciertos":"87.67%",
+    "precision":"87.67%",
+    "especificidad":"87.67%",
+    "sensibilidad":"100%"
+    
+    },
+    {
+    "metodo":"PerceptronUmbral",
+    "aciertos":"89.04%",
+    "precision":"88.88%",
+    "especificidad":"11.11%",
+    "sensibilidad":"100%"
+    },
+    {
+    "metodo":"PerceptronDelta",
+    "aciertos":"84.93%",
+    "precision":"100%",
+    "especificidad":"100%",
+    "sensibilidad":"15.38%"
+    },
+    {
+    "metodo":"RegresionLogistica",
+    "aciertos":"87.67%",
+    "precision":"85%",
+    "especificidad":"88%",
+    "sensibilidad":"86%"
+    }
+]
