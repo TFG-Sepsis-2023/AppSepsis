@@ -23,4 +23,12 @@ urlpatterns = [
    path('salidaSVMVaso/', views.salidaSVMVaso, name='salidaSVMVaso'),
    path('salidaNBSup/', views.salidaNBSup, name='salidaNBSup'),
    path('salidaNBVaso/', views.salidaNBVaso, name='salidaNBVaso'),
+   path('salidaComparOutcome/', views.salidaComparOutcome, name='salidaComparOutcome'),
+   path('salidaComparVaso/', views.salidaComparVaso, name='salidaComparVaso'),
+   path('salidaComparSuper/', views.salidaComparSuper, name='salidaComparSuper'),
+   path('salidaComparSofa/', views.salidaComparSofa, name='salidaComparSofa'),
+   path('salidaRegresionSuper/', views.salidaRegresionSuper, name='salidaRegresionSuper'),
+   path('salidaRegresionVaso/', views.salidaRegresionVaso, name='salidaRegresionVaso'),
+   path('salidaRegresionOutcome/', views.salidaRegresionOutcome, name='salidaRegresionOutcome'),
+   path('salidaRegresionSofa/', views.salidaRegresionSofa, name='salidaRegresionSofa'),
 ]

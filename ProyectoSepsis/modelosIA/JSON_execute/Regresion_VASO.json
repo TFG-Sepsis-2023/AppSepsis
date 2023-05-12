@@ -1,0 +1,30 @@
+[
+    {
+    "porcentaje":"0.20",
+    "aciertos":"90.41%",
+    "precision":"90%",
+    "especificidad":"90%",
+    "sensibilidad":"90%"
+    },
+    {
+    "porcentaje":"0.50",
+    "aciertos":"89.56%",
+    "precision":"89%",
+    "especificidad":"90%",
+    "sensibilidad":"89%"
+    },
+    {
+    "porcentaje":"0.70",
+    "aciertos":"91.37%",
+    "precision":"91%",
+    "especificidad":"91%",
+    "sensibilidad":"91%"
+    },
+    {
+    "porcentaje":"0.90",
+    "aciertos":"91.46%",
+    "precision":"91%",
+    "especificidad":"91%",
+    "sensibilidad":"91%"
+    }
+]

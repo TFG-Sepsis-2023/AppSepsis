@@ -1,31 +1,17 @@
 [
     {
-    "metodo":"PerceptronUmbral",
-    "aciertos":"87.67%",
-    "precision":"87.67%",
-    "especificidad":"87.67%",
-    "sensibilidad":"100%"
-    },
-    {
-    "metodo":"PerceptronDelta",
-    "aciertos":"87.67%",
-    "precision":"87.67%",
-    "especificidad":"87.67%",
-    "sensibilidad":"100%"
-    },
-    {
     "metodo":"RedNeuronal",
-    "aciertos":"87.67%",
-    "precision":"87.67%",
-    "especificidad":"87.67%",
-    "sensibilidad":"100%"
+    "aciertos":"98.62%",
+    "precision":"93.15%",
+    "especificidad":"98.63%",
+    "sensibilidad":"98.63%"
     },
     {
     "metodo":"K-NN",
-    "aciertos":"87.67%",
-    "precision":"87.67%",
-    "especificidad":"87.67%",
-    "sensibilidad":"100%"
+    "aciertos":"65.75%",
+    "precision":"61%",
+    "especificidad":"66%",
+    "sensibilidad":"63%"
     },
     {
     "metodo":"RegresionLogistica",

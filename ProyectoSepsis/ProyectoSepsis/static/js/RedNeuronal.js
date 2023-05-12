@@ -12,7 +12,7 @@ $(document).ready(() => {
     $('#descripcion').append('<div class="col-md-6 p-lg-5 mx-auto my-5"><h4 class="fw-normal">TEST SEPSIS METODO: Red Neuronal</h4></div>')
     $('#muestra_datos').hide()
     $('#muestra_datos').append(`<h5 class="mb-3" id ="tit"></h5>
-                                <div class="row">
+                                <div class="row mb-5">
                                     <div class="col"> 
                                         <table id="tabladatos" class="table table-striped table-bordered table-hover table-advance">
                                             <thead>
@@ -28,11 +28,11 @@ $(document).ready(() => {
                                         </table>
                                     </div>
                                     <div class="col">
-                                        <canvas id="graf_sup"></canvas>
+                                        <canvas id="graf_outcome"></canvas>
                                     </div>
                                 </div>
                                 <h5 class="mb-3" id ="tit1"></h5>
-                                <div class="row">
+                                <div class="row mb-5">
                                     <div class="col"> 
                                         <table id="tabladatos1" class="table table-striped table-bordered table-hover table-advance">
                                             <thead>
@@ -48,7 +48,7 @@ $(document).ready(() => {
                                         </table>
                                     </div>
                                     <div class="col">
-                                        <canvas id="graf_vaso"></canvas>
+                                        <canvas id="graf_sofa"></canvas>
                                     </div>
                                 </div>
                                 `);
@@ -71,7 +71,7 @@ $(document).ready(() => {
         }
     });
 
-    setTimeout(graf_sup, 1000);
+    setTimeout(graf_outcome, 1000);
     
     url = '/salidaRNSofa/';
     $.getJSON( url, function(data){
@@ -91,12 +91,12 @@ $(document).ready(() => {
         }
     });
 
-    setTimeout(graf_vaso, 1000);
+    setTimeout(graf_sofa, 1000);
     
 });
 
-function graf_sup(){
-    var ctx = document.getElementById('graf_sup').getContext('2d');
+function graf_outcome(){
+    var ctx = document.getElementById('graf_outcome').getContext('2d');
     new Chart(ctx, {
         type: 'line',
         data: {
@@ -131,8 +131,8 @@ function graf_sup(){
     });
 };
 
-function graf_vaso(){
-    var ctx = document.getElementById('graf_vaso').getContext('2d');
+function graf_sofa(){
+    var ctx = document.getElementById('graf_sofa').getContext('2d');
     new Chart(ctx, {
         type: 'line',
         data: {

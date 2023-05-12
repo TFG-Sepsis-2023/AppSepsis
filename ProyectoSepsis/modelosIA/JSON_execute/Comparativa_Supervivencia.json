@@ -37,10 +37,10 @@
     },
     {
     "metodo":"PerceptronUmbral",
-    "aciertos":"89.04%",
-    "precision":"88.88%",
-    "especificidad":"11.11%",
-    "sensibilidad":"100%"
+    "aciertos":"86.30%",
+    "precision":"87.5%",
+    "especificidad":"0%",
+    "sensibilidad":"98.43%"
     },
     {
     "metodo":"PerceptronDelta",

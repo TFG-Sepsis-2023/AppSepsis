@@ -1,4 +1,4 @@
-let metodos = [];
+let porcentaje = [];
 let aciertosSuper = [];
 let precisionSuper = [];
 let especificidadSuper = [];
@@ -7,7 +7,6 @@ let aciertosVaso = [];
 let precisionVaso = [];
 let especificidadVaso = [];
 let sensibilidadVaso = [];
-let metodos1 = [];
 let aciertosOutcome = [];
 let precisionOutcome = [];
 let especificidadOutcome = [];
@@ -20,35 +19,106 @@ let sensibilidadSofa = [];
 
 
 $(document).ready(() => {
-    $('#descripcion').append('<div class="col-md-6 p-lg-5 mx-auto my-5"><h4 class="fw-normal">COMPARATIVA ENTRE LOS MÉTODOS USADOS</h4></div>')
+    $('#descripcion').append('<div class="col-md-6 p-lg-5 mx-auto my-5"><h4 class="fw-normal">TEST SEPSIS METODO: Regresión Logística</h4></div>')
     $('#muestra_datos').hide()
-    $('#muestra_datos').append(`
+    $('#muestra_datos').append(`<h5 class="mb-3" id ="tit"></h5>
                                 <div class="row mb-5">
-                                    <div class="col">
-                                        <h6 class="mb-3" id ="tit"></h6>
-                                        <canvas id="graf_sup"></canvas>
+                                    <div class="col"> 
+                                        <table id="tabladatos" class="table table-striped table-bordered table-hover table-advance">
+                                            <thead>
+                                                <tr>
+                                                    <th>Porcentaje Datos Test</th>
+                                                    <th>Acierto</th>
+                                                    <th>Presición</th>
+                                                    <th>Especificidad</th>
+                                                    <th>Sensibilidad</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
                                     </div>
                                     <div class="col">
-                                        <h6 class="mb-3" id ="tit1"></h6>
+                                        <canvas id="graf_super"></canvas>
+                                    </div>
+                                </div>
+                                <h5 class="mb-3" id ="tit1"></h5>
+                                <div class="row mb-5">
+                                    <div class="col"> 
+                                        <table id="tabladatos1" class="table table-striped table-bordered table-hover table-advance">
+                                            <thead>
+                                                <tr>
+                                                    <th>Porcentaje Datos Test</th>
+                                                    <th>Acierto</th>
+                                                    <th>Presición</th>
+                                                    <th>Especificidad</th>
+                                                    <th>Sensibilidad</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col">
                                         <canvas id="graf_vaso"></canvas>
                                     </div>
                                 </div>
+                                <h5 class="mb-3" id ="tit2"></h5>
                                 <div class="row mb-5">
-                                    <div class="col">
-                                        <h6 class="mb-3" id ="tit2"></h6>
-                                        <canvas id="graf_outcome"></canvas>
+                                    <div class="col"> 
+                                        <table id="tabladatos2" class="table table-striped table-bordered table-hover table-advance">
+                                            <thead>
+                                                <tr>
+                                                    <th>Porcentaje Datos Test</th>
+                                                    <th>Acierto</th>
+                                                    <th>Presición</th>
+                                                    <th>Especificidad</th>
+                                                    <th>Sensibilidad</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
                                     </div>
                                     <div class="col">
-                                        <h6 class="mb-3" id ="tit3"></h6>
+                                        <canvas id="graf_outcome"></canvas>
+                                    </div>
+                                </div>
+                                <h5 class="mb-3" id ="tit3"></h5>
+                                <div class="row mb-5">
+                                    <div class="col"> 
+                                        <table id="tabladatos3" class="table table-striped table-bordered table-hover table-advance">
+                                            <thead>
+                                                <tr>
+                                                    <th>Porcentaje Datos Test</th>
+                                                    <th>Acierto</th>
+                                                    <th>Presición</th>
+                                                    <th>Especificidad</th>
+                                                    <th>Sensibilidad</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col">
                                         <canvas id="graf_sofa"></canvas>
                                     </div>
                                 </div>
                                 `);
-    let url = '/salidaComparSuper/';
+    let url = '/salidaRegresionSuper/';
     $.getJSON( url, function(data){
-        $('#tit').append(`Resultados (SUPERVIVENCIA) - Datos Entrenamiento: 291`)
+        $('#tit').append(`Resultados (SUPERVIVENCIA)`)
         for (let i = 0; i < data.length; i++) {
-            metodos.push(data[i].metodo)
+            $('#tabladatos tbody').append(`
+                <tr>
+                    <td>${data[i].porcentaje}</td>
+                    <td>${data[i].aciertos}</td>
+                    <td>${data[i].precision}</td>
+                    <td>${data[i].especificidad}</td>
+                    <td>${data[i].sensibilidad}</td>
+            `)
+            porcentaje.push(parseFloat(data[i].porcentaje))
             aciertosSuper.push(parseFloat(data[i].aciertos.substring(0, data[i].aciertos.length - 1)))
             precisionSuper.push(parseFloat(data[i].precision.substring(0, data[i].precision.length - 1)))
             especificidadSuper.push(parseFloat(data[i].especificidad.substring(0, data[i].especificidad.length - 1)))
@@ -56,26 +126,42 @@ $(document).ready(() => {
         }
     });
 
-    setTimeout(graf_sup, 1000);
+    setTimeout(graf_super, 1000);
     
-    url = '/salidaComparVaso/';
+    url = '/salidaRegresionVaso/';
     $.getJSON( url, function(data){
-        $('#tit1').append(`Resultados (VASOPRESORES) - Datos Entrenamiento: 291`)
+        $('#tit1').append(`Resultados (VASOPRESORES)`)
         for (let i = 0; i < data.length; i++) {
+            $('#tabladatos1 tbody').append(`
+                <tr>
+                    <td>${data[i].porcentaje}</td>
+                    <td>${data[i].aciertos}</td>
+                    <td>${data[i].precision}</td>
+                    <td>${data[i].especificidad}</td>
+                    <td>${data[i].sensibilidad}</td>
+            `)
             aciertosVaso.push(parseFloat(data[i].aciertos.substring(0, data[i].aciertos.length - 1)))
             precisionVaso.push(parseFloat(data[i].precision.substring(0, data[i].precision.length - 1)))
             especificidadVaso.push(parseFloat(data[i].especificidad.substring(0, data[i].especificidad.length - 1)))
             sensibilidadVaso.push(parseFloat(data[i].sensibilidad.substring(0, data[i].sensibilidad.length - 1)))
+
         }
     });
 
     setTimeout(graf_vaso, 1000);
 
-    url = '/salidaComparOutcome/';
+    url = '/salidaRegresionOutcome/';
     $.getJSON( url, function(data){
-        $('#tit2').append(`Resultados (OUTCOME) - Datos Entrenamiento: 291`)
+        $('#tit2').append(`Resultados (OUTCOME)`)
         for (let i = 0; i < data.length; i++) {
-            metodos1.push(data[i].metodo)
+            $('#tabladatos2 tbody').append(`
+                <tr>
+                    <td>${data[i].porcentaje}</td>
+                    <td>${data[i].aciertos}</td>
+                    <td>${data[i].precision}</td>
+                    <td>${data[i].especificidad}</td>
+                    <td>${data[i].sensibilidad}</td>
+            `)
             aciertosOutcome.push(parseFloat(data[i].aciertos.substring(0, data[i].aciertos.length - 1)))
             precisionOutcome.push(parseFloat(data[i].precision.substring(0, data[i].precision.length - 1)))
             especificidadOutcome.push(parseFloat(data[i].especificidad.substring(0, data[i].especificidad.length - 1)))
@@ -85,10 +171,19 @@ $(document).ready(() => {
 
     setTimeout(graf_outcome, 1000);
 
-    url = '/salidaComparSofa/';
+    url = '/salidaRegresionSofa/';
     $.getJSON( url, function(data){
-        $('#tit3').append(`Resultados (SOFA) - Datos Entrenamiento: 291`)
+        tasa = parseFloat(data[0].tasa);
+        $('#tit3').append(`Resultados (SOFA)`)
         for (let i = 0; i < data.length; i++) {
+            $('#tabladatos3 tbody').append(`
+                <tr>
+                    <td>${data[i].porcentaje}</td>
+                    <td>${data[i].aciertos}</td>
+                    <td>${data[i].precision}</td>
+                    <td>${data[i].especificidad}</td>
+                    <td>${data[i].sensibilidad}</td>
+            `)
             aciertosSofa.push(parseFloat(data[i].aciertos.substring(0, data[i].aciertos.length - 1)))
             precisionSofa.push(parseFloat(data[i].precision.substring(0, data[i].precision.length - 1)))
             especificidadSofa.push(parseFloat(data[i].especificidad.substring(0, data[i].especificidad.length - 1)))
@@ -100,12 +195,12 @@ $(document).ready(() => {
     
 });
 
-function graf_sup(){
-    var ctx = document.getElementById('graf_sup').getContext('2d');
+function graf_super(){
+    var ctx = document.getElementById('graf_super').getContext('2d');
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: metodos,
+            labels: porcentaje,
             datasets: [
                 {
                     label: 'Aciertos',
@@ -146,7 +241,7 @@ function graf_vaso(){
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: metodos,
+            labels: porcentaje,
             datasets: [
                 {
                     label: 'Aciertos',
@@ -187,7 +282,7 @@ function graf_outcome(){
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: metodos1,
+            labels: porcentaje,
             datasets: [
                 {
                     label: 'Aciertos',
@@ -228,7 +323,7 @@ function graf_sofa(){
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: metodos1,
+            labels: porcentaje,
             datasets: [
                 {
                     label: 'Aciertos',

@@ -16,7 +16,7 @@ $(document).ready(() => {
     $('#descripcion').append('<div class="col-md-6 p-lg-5 mx-auto my-5"><h4 class="fw-normal">TEST SEPSIS METODO: ML</h4></div>')
     $('#muestra_datos').hide()
     $('#muestra_datos').append(`<h5 class="mb-3" id ="tit"></h5>
-                                <div class="row">
+                                <div class="row mb-5">
                                     <div class="col"> 
                                         <table id="tabladatos" class="table table-striped table-bordered table-hover table-advance">
                                             <thead>
@@ -37,7 +37,7 @@ $(document).ready(() => {
                                     </div>
                                 </div>
                                 <h5 class="mb-3" id ="tit1"></h5>
-                                <div class="row">
+                                <div class="row mb-5">
                                     <div class="col"> 
                                         <table id="tabladatos1" class="table table-striped table-bordered table-hover table-advance">
                                             <thead>

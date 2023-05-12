@@ -44,10 +44,10 @@
 },
 {
 "metodo":"PerceptronDelta",
-"aciertos":"84.93%",
-"precision":"100%",
-"especificidad":"100%",
-"sensibilidad":"15.38%"
+"aciertos":"86.30%",
+"precision":"66.66%",
+"especificidad":"98.38%",
+"sensibilidad":"18.18%"
 },
 {
 "metodo":"RegresionLogistica",

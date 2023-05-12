@@ -117,6 +117,54 @@ def salidaNBVaso(request):
     response = json.load(f)
     return JsonResponse(response, status=200, safe=False)
 
+def salidaComparOutcome(request):
+
+    f = open("modelosIA/JSON_execute/Comparativa_Outcome.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaComparVaso(request):
+
+    f = open("modelosIA/JSON_execute/Comparativa_Vaso.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaComparSuper(request):
+
+    f = open("modelosIA/JSON_execute/Comparativa_Supervivencia.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaComparSofa(request):
+
+    f = open("modelosIA/JSON_execute/Comparativa_Sofa.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaRegresionSuper(request):
+
+    f = open("modelosIA/JSON_execute/Regresion_SUPERVIVENCIA.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaRegresionVaso(request):
+
+    f = open("modelosIA/JSON_execute/Regresion_VASO.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaRegresionOutcome(request):
+
+    f = open("modelosIA/JSON_execute/Regresion_OUTCOME.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
+def salidaRegresionSofa(request):
+
+    f = open("modelosIA/JSON_execute/Regresion_SOFA.json")
+    response = json.load(f)
+    return JsonResponse(response, status=200, safe=False)
+
 def test(request, metodo):
     
     return render(request, 'main/principal/test.html', {'metodo': metodo})
