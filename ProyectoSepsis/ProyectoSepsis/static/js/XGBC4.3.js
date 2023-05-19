@@ -24,7 +24,7 @@ $(document).ready(() => {
                                         <table id="tabladatos" class="table table-striped table-bordered table-hover table-advance">
                                             <thead>
                                                 <tr>
-                                                    <th>Datos Test</th>
+                                                    <th>Profundidad</th>
                                                     <th>Acierto</th>
                                                     <th>Presición</th>
                                                     <th>Especificidad</th>
@@ -45,7 +45,7 @@ $(document).ready(() => {
                                         <table id="tabladatos1" class="table table-striped table-bordered table-hover table-advance">
                                             <thead>
                                                 <tr>
-                                                    <th>Datos Test</th>
+                                                    <th>Profundidad</th>
                                                     <th>Acierto</th>
                                                     <th>Presición</th>
                                                     <th>Especificidad</th>

@@ -1,7 +1,7 @@
 [
 {
-"datosEntrenamiento":"50",
-"datosTest":"150",
+"datosEntrenamiento":"300",
+"datosTest":"64",
 "profundidad":"1",
 "aciertos":"96.67%",
 "precision":"96.50%",
@@ -9,8 +9,8 @@
 "sensibilidad":"100.00%"
 },
 {
-"datosEntrenamiento":"50",
-"datosTest":"150",
+"datosEntrenamiento":"300",
+"datosTest":"64",
 "profundidad":"2",
 "aciertos":"95.33%",
 "precision":"97.81%",

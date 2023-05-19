@@ -46,7 +46,7 @@ $(document).ready(() => {
                                 `);
     let url = '/salidaComparSuper/';
     $.getJSON( url, function(data){
-        $('#tit').append(`Resultados (SUPERVIVENCIA) - Datos Entrenamiento: 291`)
+        $('#tit').append(`Resultados (SUPERVIVENCIA) - Datos Entrenamiento: 80%`)
         for (let i = 0; i < data.length; i++) {
             metodos.push(data[i].metodo)
             aciertosSuper.push(parseFloat(data[i].aciertos.substring(0, data[i].aciertos.length - 1)))
@@ -60,7 +60,7 @@ $(document).ready(() => {
     
     url = '/salidaComparVaso/';
     $.getJSON( url, function(data){
-        $('#tit1').append(`Resultados (VASOPRESORES) - Datos Entrenamiento: 291`)
+        $('#tit1').append(`Resultados (VASOPRESORES) - Datos Entrenamiento: 80%`)
         for (let i = 0; i < data.length; i++) {
             aciertosVaso.push(parseFloat(data[i].aciertos.substring(0, data[i].aciertos.length - 1)))
             precisionVaso.push(parseFloat(data[i].precision.substring(0, data[i].precision.length - 1)))
@@ -73,7 +73,7 @@ $(document).ready(() => {
 
     url = '/salidaComparOutcome/';
     $.getJSON( url, function(data){
-        $('#tit2').append(`Resultados (OUTCOME) - Datos Entrenamiento: 291`)
+        $('#tit2').append(`Resultados (OUTCOME) - Datos Entrenamiento: 80%`)
         for (let i = 0; i < data.length; i++) {
             metodos1.push(data[i].metodo)
             aciertosOutcome.push(parseFloat(data[i].aciertos.substring(0, data[i].aciertos.length - 1)))
@@ -87,7 +87,7 @@ $(document).ready(() => {
 
     url = '/salidaComparSofa/';
     $.getJSON( url, function(data){
-        $('#tit3').append(`Resultados (SOFA) - Datos Entrenamiento: 291`)
+        $('#tit3').append(`Resultados (SOFA) - Datos Entrenamiento: 80%`)
         for (let i = 0; i < data.length; i++) {
             aciertosSofa.push(parseFloat(data[i].aciertos.substring(0, data[i].aciertos.length - 1)))
             precisionSofa.push(parseFloat(data[i].precision.substring(0, data[i].precision.length - 1)))

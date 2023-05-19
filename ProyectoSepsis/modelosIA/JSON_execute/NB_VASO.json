@@ -1,51 +1,37 @@
 [
-{
-"datosEntrenamiento":"50",
-"aciertos":"85.56%",
-"precision":"63.64%",
-"especificidad":"94.59%",
-"sensibilidad":"43.75%"
-},
-{
-"datosEntrenamiento":"100",
-"aciertos":"88.46%",
-"precision":"73.33%",
-"especificidad":"96.95%",
-"sensibilidad":"44.0%"
-},
-{
-"datosEntrenamiento":"150",
-"aciertos":"91.16%",
-"precision":"88.24%",
-"especificidad":"98.91%",
-"sensibilidad":"46.88%"
-},
-{
-"datosEntrenamiento":"200",
-"aciertos":"88.43%",
-"precision":"85.71%",
-"especificidad":"98.65%",
-"sensibilidad":"39.13%"
-},
-{
-"datosEntrenamiento":"250",
-"aciertos":"87.54%",
-"precision":"76.47%",
-"especificidad":"96.79%",
-"sensibilidad":"46.43%"
-},
-{
-"datosEntrenamiento":"300",
-"aciertos":"85.5%",
-"precision":"69.05%",
-"especificidad":"95.24%",
-"sensibilidad":"44.62%"
-},
-{
-"datosEntrenamiento":"350",
-"aciertos":"86.91%",
-"precision":"76.32%",
-"especificidad":"96.92%",
-"sensibilidad":"43.28%"
-}
-]
+    {
+    "dataTest":"0.1",
+    "aciertos":"67.86%",
+    "precision":"0.0%",
+    "especificidad":"86.36%",
+    "sensibilidad":"0.0%"
+    },
+    {
+    "dataTest":"0.3",
+    "aciertos":"80.77%",
+    "precision":"20.0%",
+    "especificidad":"91.11%",
+    "sensibilidad":"14.29%"
+    },
+    {
+    "dataTest":"0.5",
+    "aciertos":"74.67%",
+    "precision":"25.0%",
+    "especificidad":"90.0%",
+    "sensibilidad":"13.33%"
+    },
+    {
+    "dataTest":"0.7",
+    "aciertos":"71.43%",
+    "precision":"20.0%",
+    "especificidad":"91.67%",
+    "sensibilidad":"6.67%"
+    },
+    {
+    "dataTest":"0.9",
+    "aciertos":"59.26%",
+    "precision":"0.0%",
+    "especificidad":"66.67%",
+    "sensibilidad":"0.0%"
+    }
+    ]
