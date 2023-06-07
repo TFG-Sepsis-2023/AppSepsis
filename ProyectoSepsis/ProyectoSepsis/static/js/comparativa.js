@@ -103,7 +103,7 @@ $(document).ready(() => {
 function graf_sup(){
     var ctx = document.getElementById('graf_sup').getContext('2d');
     new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
             labels: metodos,
             datasets: [
@@ -144,7 +144,7 @@ function graf_sup(){
 function graf_vaso(){
     var ctx = document.getElementById('graf_vaso').getContext('2d');
     new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
             labels: metodos,
             datasets: [
@@ -185,7 +185,7 @@ function graf_vaso(){
 function graf_outcome(){
     var ctx = document.getElementById('graf_outcome').getContext('2d');
     new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
             labels: metodos1,
             datasets: [
@@ -226,7 +226,7 @@ function graf_outcome(){
 function graf_sofa(){
     var ctx = document.getElementById('graf_sofa').getContext('2d');
     new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
             labels: metodos1,
             datasets: [

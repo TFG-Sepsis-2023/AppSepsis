@@ -63,10 +63,8 @@ $(document).ready(() => {
                                 `);
     let url = '/salidaXGBSup/';
     $.getJSON( url, function(data){
-        console.log(data)
-        datosEntrenamiento = parseFloat(data[0].datosEntrenamiento);
-        datosTest = parseFloat(data[0].datosTest);
-        $('#tit').append(`Resultados (SUPERVIVENCIA) - Datos Entrenamiento: ${datosEntrenamiento} | Datos Test: ${datosTest}`)
+        datosTest = parseFloat(data[0].dataTest);
+        $('#tit').append(`Resultados (SUPERVIVENCIA) - Datos Test: ${datosTest}`)
         for (let i = 0; i < data.length; i++) {
             $('#tabladatos tbody').append(`
                 <tr>
@@ -76,7 +74,7 @@ $(document).ready(() => {
                     <td>${data[i].especificidad}</td>
                     <td>${data[i].sensibilidad}</td>
             `)
-            profundidad.push(parseInt(data[i].profundidad))
+            profundidad.push(data[i].profundidad)
             aciertos.push(parseFloat(data[i].aciertos.substring(0, data[i].aciertos.length - 1)))
             precision.push(parseFloat(data[i].precision.substring(0, data[i].precision.length - 1)))
             especificidad.push(parseFloat(data[i].especificidad.substring(0, data[i].especificidad.length - 1)))
@@ -90,9 +88,8 @@ $(document).ready(() => {
     
     url = '/salidaXGBVaso/';
     $.getJSON( url, function(data){
-        datosEntrenamiento1 = parseFloat(data[0].datosEntrenamiento);
-        datosTest1 = parseFloat(data[0].datosTest);
-        $('#tit1').append(`Resultados (VASOPRESORES) - Datos Entrenamiento: ${datosEntrenamiento1} | Datos Test: ${datosTest1}`)
+        datosTest1 = parseFloat(data[0].dataTest);
+        $('#tit1').append(`Resultados (VASOPRESORES) - Datos Test: ${datosTest1}`)
 
         for (let i = 0; i < data.length; i++) {
             $('#tabladatos1 tbody').append(`
